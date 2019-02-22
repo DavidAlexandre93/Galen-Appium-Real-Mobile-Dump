@@ -1,2 +1,2 @@
-# Galen-Appium-Real-Mobile-Dump
-DUMP Real Mobile
+# Real-Mobile-Appium-JUnit
+Test Real Mobile Device Junit

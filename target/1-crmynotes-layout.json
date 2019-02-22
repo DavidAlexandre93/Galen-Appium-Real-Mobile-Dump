@@ -1,0 +1,39 @@
+{
+  "testId" : "1-crmynotes-layout",
+  "name" : "CRmynotes layout",
+  "report" : {
+    "nodes" : [ {
+      "name" : "check CRmynotes layout",
+      "status" : "info",
+      "time" : 1550771579443,
+      "includedTags" : [ "desktop" ],
+      "excludedTags" : [ ],
+      "sections" : [ {
+        "name" : "My notes",
+        "place" : {
+          "filePath" : "specs/mynotes.gspec",
+          "lineNumber" : 7
+        },
+        "objects" : [ {
+          "name" : "main-caption",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/mynotes.gspec",
+              "lineNumber" : 9
+            },
+            "name" : "text is \"My Notes\"",
+            "highlight" : [ "main-caption" ]
+          } ]
+        } ]
+      } ],
+      "objects" : {
+        "main-caption" : {
+          "area" : [ 20, 237, 320, 33 ]
+        }
+      },
+      "screenshot" : "layout-2-screenshot.png",
+      "type" : "layout"
+    } ]
+  }
+}

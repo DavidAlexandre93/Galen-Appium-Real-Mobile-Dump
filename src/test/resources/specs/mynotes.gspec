@@ -1,0 +1,13 @@
+@objects
+    main-caption      #my-notes-page > h2
+
+    menu     id    menu
+    #menu-item-*    css    #menu .middle-wrapper ul li
+
+= My notes =
+    main-caption:
+        text is "My Notes"
+
+#= Menu =
+    #menu-item-4:
+        #image file mynotes-dump/objects/menu-item-4.png, map-filter denoise 2, error 5px

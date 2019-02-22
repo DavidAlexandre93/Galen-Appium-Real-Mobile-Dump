@@ -1,0 +1,39 @@
+{
+  "testId" : "1-creventteste-layout",
+  "name" : "CReventTeste layout",
+  "report" : {
+    "nodes" : [ {
+      "name" : "check CReventTest layout",
+      "status" : "info",
+      "time" : 1550771586217,
+      "includedTags" : [ "desktop" ],
+      "excludedTags" : [ ],
+      "sections" : [ {
+        "name" : "Content",
+        "place" : {
+          "filePath" : "specs/eventTeste.gspec",
+          "lineNumber" : 5
+        },
+        "objects" : [ {
+          "name" : "btn-primary",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/eventTeste.gspec",
+              "lineNumber" : 7
+            },
+            "name" : "color-scheme 80 to 90 % #22A30B, 0 % white",
+            "highlight" : [ "btn-primary" ]
+          } ]
+        } ]
+      } ],
+      "objects" : {
+        "btn-primary" : {
+          "area" : [ 20, 456, 320, 46 ]
+        }
+      },
+      "screenshot" : "layout-3-screenshot.png",
+      "type" : "layout"
+    } ]
+  }
+}

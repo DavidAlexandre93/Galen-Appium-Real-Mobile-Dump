@@ -1,0 +1,130 @@
+{
+  "testId" : "1-crhomepage-layout",
+  "name" : "CRhomepage layout",
+  "report" : {
+    "nodes" : [ {
+      "name" : "check CRhomepage layout",
+      "status" : "info",
+      "time" : 1550771572643,
+      "includedTags" : [ "mobile" ],
+      "excludedTags" : [ ],
+      "sections" : [ {
+        "name" : "Menu",
+        "place" : {
+          "filePath" : "specs/homepage.gspec",
+          "lineNumber" : 41
+        },
+        "objects" : [ {
+          "name" : "menu",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/homepage.gspec",
+              "lineNumber" : 45
+            },
+            "name" : "below header 1 px",
+            "meta" : [ {
+              "from" : {
+                "object" : "menu",
+                "edge" : "top"
+              },
+              "to" : {
+                "object" : "header",
+                "edge" : "bottom"
+              },
+              "expectedDistance" : "1px",
+              "realDistance" : "1px"
+            } ],
+            "highlight" : [ "menu", "header" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/homepage.gspec",
+              "lineNumber" : 46
+            },
+            "name" : "above footer 549px",
+            "meta" : [ {
+              "from" : {
+                "object" : "menu",
+                "edge" : "bottom"
+              },
+              "to" : {
+                "object" : "footer",
+                "edge" : "top"
+              },
+              "expectedDistance" : "549px",
+              "realDistance" : "549px"
+            } ],
+            "highlight" : [ "menu", "footer" ]
+          } ]
+        } ]
+      }, {
+        "name" : "Content",
+        "place" : {
+          "filePath" : "specs/homepage.gspec",
+          "lineNumber" : 102
+        },
+        "objects" : [ {
+          "name" : "loginButton",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/homepage.gspec",
+              "lineNumber" : 110
+            },
+            "name" : "width 260px",
+            "meta" : [ {
+              "from" : {
+                "object" : "loginButton",
+                "edge" : "left"
+              },
+              "to" : {
+                "object" : "loginButton",
+                "edge" : "right"
+              },
+              "expectedDistance" : "260px",
+              "realDistance" : "260px"
+            } ],
+            "highlight" : [ "loginButton" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/homepage.gspec",
+              "lineNumber" : 111
+            },
+            "name" : "height 46px",
+            "meta" : [ {
+              "from" : {
+                "object" : "loginButton",
+                "edge" : "top"
+              },
+              "to" : {
+                "object" : "loginButton",
+                "edge" : "bottom"
+              },
+              "expectedDistance" : "46px",
+              "realDistance" : "46px"
+            } ],
+            "highlight" : [ "loginButton" ]
+          } ]
+        } ]
+      } ],
+      "objects" : {
+        "footer" : {
+          "area" : [ 0, 746, 360, 60 ]
+        },
+        "loginButton" : {
+          "area" : [ 50, 606, 260, 46 ]
+        },
+        "header" : {
+          "area" : [ 0, 0, 360, 69 ]
+        },
+        "menu" : {
+          "area" : [ 0, 70, 360, 127 ]
+        }
+      },
+      "screenshot" : "layout-1-screenshot.png",
+      "type" : "layout"
+    } ]
+  }
+}

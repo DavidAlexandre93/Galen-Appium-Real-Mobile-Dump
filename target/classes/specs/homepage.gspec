@@ -1,0 +1,143 @@
+@objects
+    header   id    header
+    header   css   #header .middle-wrapper
+        logo        img
+        caption     h1
+    
+    menu     id    menu
+    menu-item-*    css    #menu .middle-wrapper ul li
+    
+    content  id   content
+    welcome-page  css     #content .jumbotron h1 
+    content-p       css     #content .jumbotron p  
+    loginButton   css     #content .button-login
+    footer   id    footer   
+    footer     css    #footer .footer-signature
+
+#= Header =
+    
+    #header:
+        
+        #height ~69px
+
+        #@on mobile
+            #inside screen 0px left right
+
+
+    #header.logo:
+
+        #image file homepage-dump/objects/header.logo.png, map-filter denoise 2, error 5px
+        #inside header 0px left, 8 to 15px top bottom
+        #width 48px
+        #height 48px
+
+
+    #header.caption:
+
+        #right-of header.logo 22px
+        #@on mobile
+            #text is "Sample Website"
+
+= Menu =
+
+    menu:
+
+        below header 1 px
+        above footer 549px
+    
+    #@if ${isVisible("menu-item-1")}  
+    #menu-item-1:
+
+        #image file homepage-dump/objects/menu-item-1.png, map-filter denoise 2, error 5px
+        #@on mobile
+            #text is "Home"
+        #width > 30px
+        #height ~64px
+        #css background-color is "rgba(0, 0, 0, 0)"
+        #css font-size is "14px" 
+        #css font-family matches ".*Helvetica Neue.*"
+        #css font-weight matches "400"
+        
+    #@elseif ${isVisible("menu-item-2")}  
+    #menu-item-2:
+
+        #image file homepage-dump/objects/menu-item-2.png, map-filter denoise 2, error 5px
+         #@on mobile
+            #text is "My Notes"
+        #width > 30px
+        #height ~64px
+        #css background-color is "rgba(0, 0, 0, 0)"
+        #css font-size is "14px" 
+        #css font-family matches ".*Helvetica Neue.*"
+        #css font-weight matches "400"
+       
+    #@elseif ${isVisible("menu-item-3")}  
+    #menu-item-3:
+
+        #image file homepage-dump/objects/menu-item-3.png, map-filter denoise 2, error 5px
+         #@on mobile
+            #text is "About"
+        #width > 30px
+        #height ~64px
+        #css background-color is "rgba(0, 0, 0, 0)"
+        #css font-size is "14px" 
+        #css font-family matches ".*Helvetica Neue.*"
+        #css font-weight matches "400"
+      
+    #@else ${isVisible("menu-item-4")}  
+    #menu-item-4:
+
+        #image file homepage-dump/objects/menu-item-4.png, map-filter denoise 2, error 5px
+         #@on mobile
+            #text is "Contact"
+        #width > 30px
+        #height ~64px
+        #css background-color is "rgba(0, 0, 0, 0)"
+        #css font-size is "14px" 
+        #css font-family matches ".*Helvetica Neue.*"
+        #css font-weight matches "400"
+
+    #menu.item-*:
+
+= Content =
+
+    #content:
+
+        #width 900px
+
+    loginButton:
+
+        width 260px
+        height 46px
+        #inside content 50px left, 772px right, 257px top, 148px bottom
+
+    #welcome-page:
+
+        #css font-weight matches "500" 
+        #css font-size is "63px" 
+        #css font-family matches ".*Helvetica Neue.*"
+
+    #content-p:
+        #css font-size is "21px" 
+        #css font-family matches ".*Helvetica Neue.*"
+        
+        
+#= Footer =
+
+    #footer:
+
+        #text is "Copyright (c) 2015"
+        #width 995px
+        #height 150px
+        
+    #@on mobile
+
+    #    @forEach [menu.item-*] as menuItem, next as nextMenuItem
+    #        ${menuItem}:
+    #            left-of ${nextMenuItem} 0 to 5px
+    #           aligned horizontally all ${nextMenuItem}
+
+       
+
+
+
